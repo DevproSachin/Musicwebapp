@@ -42,6 +42,8 @@ body {
     justify-content: space-around;
     padding-top: 6px;
     align-items: center;
+    /* padding-left: 6rem;
+    padding-right: 1rem; */
 }
 .icons .main_button {
     width: 5rem;
@@ -75,6 +77,12 @@ input#myprogressBar {
     justify-content: space-between;
     padding: 10px 10px;
 }
+.volume {
+    display: flex;
+    justify-content: end;
+    margin-right: 17px;
+}
+
 .anime {
     animation:rotatePlayer 3s linear infinite;
 }
