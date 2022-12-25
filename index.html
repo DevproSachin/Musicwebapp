@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+        <div class="main_container">
+                 <div class="magical_app">
+                         <h2 id ="title"> Oh Oh jane jana </h2>
+                         <p id ="artist"> Salman Khan</p>
+                         <div class="img_container">
+                                  <img src="assets/playing.gif" alt="imgtg" class="cover_image ">
+                                             
+                                </div>
+                                <audio src="music/1.mp3"></audio>
+                                <div class="timig_container">
+                                        <div id="current_time">
+                                             0:00                      
+                                        </div>
+
+                                        <div id="duration">
+                                              2:44
+                                        </div>
+                                </div>
+                       
+                                <div class="progress_bar">
+                                       <div class="inp">
+                                          <input type="range" id="myprogressBar" value ="0" Min ="0" Max="100" >
+                                       </div>
+
+                                </div>
+                         <div class="icons">
+                            <i class="fa-solid fa-backward" id="prev"></i>
+                            <i class="fa-solid fa-play main_button" id="play"></i>
+                            <i class="fa-solid fa-forward" id="next"></i>
+                         </div>
+                 </div>
+
+        </div>
+<script src="https://kit.fontawesome.com/d1f2f6ef7a.js" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
