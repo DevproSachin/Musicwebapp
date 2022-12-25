@@ -8,6 +8,8 @@ const next = document.getElementById("next");
 let myprogressBar =  document.getElementById("myprogressBar");
 let total_current_time = document.getElementById("current_time");
 let total_duration = document.getElementById("duration");
+let volume_bar = document.getElementById("volume-bar");
+const mutes = document.getElementById("mute");
 const songs = [
    {
      name: "1",
@@ -66,6 +68,26 @@ play.addEventListener('click',() =>{
       isPlaying ? pauseMusic() : playMusic();
 });
 
+// mutes.addEventListener ('click', ()=> {
+//   if(music.muted) {
+//     music.muted=false;
+//   }  
+//   else{
+//     music.muted=true;
+//   }
+// },false);
+mutes.addEventListener ('click', ()=> {
+  if(music.muted == false) {
+    music.muted= true;
+    mute.classList.remove("fa-volume-xmark");
+    mute.classList.add ( "fa-music");
+  }  
+  else{
+    music.muted=false;
+    mute.classList.add("fa-volume-xmark");
+    mute.classList.remove ( "fa-music");
+  }
+});
 //changing the music data 
 const loadSong = (songs) =>{
     title.innerText = songs.title;
@@ -122,6 +144,9 @@ music.addEventListener('timeupdate', () =>{
  myprogressBar.addEventListener('change',() => {
   music.currentTime = myprogressBar.value *music.duration/100;
 });
+
+
+
 
 music.addEventListener('ended' ,nextSong);
 next.addEventListener('click',nextSong);
