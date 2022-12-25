@@ -80,7 +80,7 @@ input#myprogressBar {
 .volume {
     display: flex;
     justify-content: end;
-    margin-right: 17px;
+    margin-right: 20px;
 }
 
 .anime {
