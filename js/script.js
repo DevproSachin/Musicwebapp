@@ -10,6 +10,7 @@ let total_current_time = document.getElementById("current_time");
 let total_duration = document.getElementById("duration");
 let volume_bar = document.getElementById("volume-bar");
 const mutes = document.getElementById("mute");
+let Mvolume = document.getElementById("volumeslider");
 const songs = [
    {
      name: "1",
@@ -49,14 +50,14 @@ const playMusic = ()=>{
     isPlaying = true;
     music.play();
     play.classList.replace("fa-play", "fa-pause");
-    // img.classList.add("anime");
+    img.classList.add("anime");
 };
 //for pause functionality 
 const pauseMusic= ()=>{
     isPlaying = false;
     music.pause();
     play.classList.replace("fa-pause", "fa-play");
-    // img.classList.remove("anime");
+    img.classList.remove("anime");
 };
 
 play.addEventListener('click',() =>{
@@ -81,12 +82,20 @@ mutes.addEventListener ('click', ()=> {
     music.muted= true;
     mute.classList.remove("fa-volume-xmark");
     mute.classList.add ( "fa-music");
+    document.getElementById("volumeslider").style.display="inline-block";
+    
   }  
   else{
     music.muted=false;
     mute.classList.add("fa-volume-xmark");
     mute.classList.remove ( "fa-music");
+    document.getElementById("volumeslider").style.display="none";
   }
+});
+
+//volume slider functionality
+Mvolume.addEventListener('mousemove',()=>{
+    music.volume= volumeslider.value/100;
 });
 //changing the music data 
 const loadSong = (songs) =>{
