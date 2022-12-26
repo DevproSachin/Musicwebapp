@@ -15,32 +15,44 @@ const songs = [
    {
      name: "1",
      title: "oh oh jane jana",
-     artist: "kamaL Khan",    
+     artist: "kamaL Khan", 
+     cover:"janejana", 
    },
    {
     name: "2",
     title: "Khanabadosh",
-    artist: "Akhil",    
+    artist: "Akhil", 
+    cover:"khanabdosh",    
   },
   {
     name: "3",
     title: "Kesariya",
-    artist: "Brahmashtra",    
+    artist: "Brahmashtra",
+    cover:"Brahmastra",    
   },
   {
     name: "4",
     title: "Saami-Saami",
-    artist: "Pushpa-the Rise",    
+    artist: "Pushpa-the Rise",  
+    cover:"saami",     
   },
   {
     name: "5",
     title: "Meri jindagi hai tu",
-    artist: "satyamev jayate",    
+    artist: "satyamev jayate",  
+    cover:"satyamev",     
   },
   {
-    name: "6",
+    name: "srivali",
     title: "Srivali",
-    artist: "pushpa the rise",    
+    artist: "pushpa the rise",  
+    cover:"srivali",     
+  },
+  {
+    name: "white",
+    title: "White Brown Black",
+    artist: "Karan Aujla Avvy Sra",  
+    cover:"white",     
   },
 
 ];
@@ -82,14 +94,15 @@ mutes.addEventListener ('click', ()=> {
     music.muted= true;
     mute.classList.remove("fa-volume-xmark");
     mute.classList.add ( "fa-music");
-    document.getElementById("volumeslider").style.display="inline-block";
+    document.getElementById("volumeslider").style.display="none";
+    
     
   }  
   else{
     music.muted=false;
     mute.classList.add("fa-volume-xmark");
     mute.classList.remove ( "fa-music");
-    document.getElementById("volumeslider").style.display="none";
+    document.getElementById("volumeslider").style.display="inline-block";
   }
 });
 
@@ -102,7 +115,7 @@ const loadSong = (songs) =>{
     title.innerText = songs.title;
     artist.innerText = songs.artist;
     music.src = "music/" + songs.name + ".mp3";
-    // img.src = "images/" +songs.name + ".jpg";
+     img.src = "assets/" +songs.cover + ".jpg";
 }
 
 songIndex = 0;
