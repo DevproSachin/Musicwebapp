@@ -42,6 +42,7 @@ input#volumeslider {
     position: relative;
     left: -75px;
     top: -112px;
+    display:none
 }
 .left{
     position:absolute;
@@ -81,6 +82,7 @@ i#mute {
     justify-content: center;
     box-shadow: 0px 3px 6px 4px #00000029;
 }
+
 .icons i.fa-solid:hover {
     color: gray;
 }
